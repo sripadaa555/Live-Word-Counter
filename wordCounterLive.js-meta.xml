@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+<!-- HELP! This is not showing up on my Lightning Application page. How do I get it to work? -->
     <apiVersion>56.0</apiVersion>
     <isExposed>true</isExposed>
     <targets>
