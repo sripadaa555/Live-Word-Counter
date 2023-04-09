@@ -2,6 +2,10 @@ import { LightningElement } from 'lwc';
 
 export default class WordCounterLive extends LightningElement {
     handleOnChange(){
+        // TODO: Refactor me to use LWC properties instead of query selectors
+        //       of data- attributes. These properties should be read-only
+        //       so we want private properties and getters.
+        //       we also need to update the template accordingly
         let char = this.template.querySelector("span[data-recid=char]");
         let word = this.template.querySelector("span[data-recid=word]");
         let space = this.template.querySelector("span[data-recid=space]");

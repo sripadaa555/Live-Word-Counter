@@ -7,7 +7,7 @@
     --slds-c-card-body-spacing-block-end:0px;
 }
 
-.moveRight{
+.move_right{
     float:right;
 }
 
@@ -21,6 +21,6 @@
     color: blueviolet;
 }
 
-.Count{
+.count{
     color: black;
 }
