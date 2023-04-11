@@ -16,8 +16,12 @@ describe('c-word-counter-live', () => {
     const element = createElement('c-word-counter-live', {
       is: WordCounterLive
     });
+      document.body.appendChild(element);
+       return Promise.resolve().then(() => {
     const charSpan = element.querySelector("span[data-recid=char]");
     expect(charSpan.textContent).toBe('0');
+             });
+
   });
 
   // New Test
@@ -27,4 +31,22 @@ describe('c-word-counter-live', () => {
    * THEN: The Words, Characters, and Spaces elements in the element are updated
    *       to the correct values
    */
+
+it('check words,characters, and spaces for the text "Extra credit" ', () => {
+  const element = createElement('c-word-counter-live', {
+    is:WordCounterLive
+  });
+  
+  document.body.appendChild(element);
+  const test_input=element.shadowRoot.querySelector('textarea');
+  test_input.value='Extra credit';
+  test_input.dispatchEvent(new CustomEvent('change'));
+  return Promise.resolve().then(() => {
+    expect(element.shadowRoot.querySelector("span[data-recid=word]").textContent).toBe(2);
+    expect(element.shadowRoot.querySelector("span[data-recid=char]").textContent).toBe(12);
+    expect(element.shadowRoot.querySelector("span[data-recid=space]").textContent).toBe(1);
+
+  });                                 
+  
+  
 });
