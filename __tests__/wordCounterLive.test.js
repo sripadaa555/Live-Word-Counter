@@ -38,7 +38,7 @@ it('check words,characters, and spaces for the text "Extra credit" ', () => {
   });
   
   document.body.appendChild(element);
-  const test_input=element.shadowRoot.querySelector('textarea');
+  const test_input=element.shadowRoot.querySelector('lightning-textarea');
   test_input.value='Extra credit';
   test_input.dispatchEvent(new CustomEvent('change'));
   return Promise.resolve().then(() => {
